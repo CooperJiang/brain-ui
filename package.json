@@ -1,0 +1,21 @@
+{
+  "name": "brain-ui",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "pnpm -C example dev"
+  },
+  "keywords": [],
+  "author": "SNine <J_longyan@163.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.8.4",
+    "vue": "^3.2.36"
+  },
+  "dependencies": {
+    "@brain-ui/components": "workspace:^0.1.1",
+    "@brain-ui/theme-chalk": "workspace:^0.1.1",
+    "@brain-ui/utils": "workspace:^0.0.1"
+  }
+}
