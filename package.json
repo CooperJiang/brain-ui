@@ -10,6 +10,7 @@
   "author": "SNine <J_longyan@163.com>",
   "license": "ISC",
   "devDependencies": {
+    "sass": "^1.55.0",
     "typescript": "^4.8.4",
     "vue": "^3.2.36"
   },

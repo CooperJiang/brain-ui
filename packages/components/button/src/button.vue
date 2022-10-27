@@ -1,22 +1,30 @@
 <template>
-  <button>
-  	<slot>{{p.size}}||{{p.type}}</slot>
-  </button>
-</template>
+    <button class="br-button" :class="classList"  :type="nativeType" :autofocus="autoFocus" :disabled="disabled || loading" @click="handlerClick"><slot></slot></button>
+  </template>
 
-<script lang="ts">
-import { computed, defineComponent } from 'vue'
-import { buttonProps } from './types'
+<script lang="ts" setup name="BrainButton">
+import { computed, defineEmits  } from 'vue'
+import { Props, Emits } from './button'
 
-export default defineComponent({
-    name: 'BrainButton',
-    props: buttonProps,
-    setup(props){
-        const p = computed(()=>{
-            const { size= 'meduim', type = 'text' } = props
-            return { size, type }
-        })
-        return { p  }
+const props = defineProps(Props)
+const emits = defineEmits(Emits)
+
+const classList = computed(() => {
+  const { type, size, round, plain, circle, disabled, nativeType, autoFocus, icon, loading } = props
+  return [
+    {
+      [`br-button--${type}`]: type,
+      [`br-button--${size}`]: size,
+      [`is-disabled`]: disabled,
+      [`is-loading`]: loading,
+      [`is-round`]: round,
+      [`is-plain`]: plain,
+      [`is-circle`]: circle,
     }
+  ]
 })
+function handlerClick (evt: MouseEvent): void {
+    emits("click", evt)
+  }
+ 
 </script>
