@@ -1,2 +1,2 @@
-export { BrainButton } from './button'
-export { BrainButtonGroup } from './button-group'
+export { BrainButton } from './button';
+export { BrainButtonGroup } from './button-group';

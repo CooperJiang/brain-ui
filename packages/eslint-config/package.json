@@ -1,5 +1,5 @@
 {
-  "name": "@brain-ui/components",
+  "name": "@brain-ui/eslint-config",
   "version": "0.0.1",
   "description": "",
   "main": "index.js",
@@ -7,9 +7,6 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "vite-plugin-vue-setup-extend": "^0.4.0"
-  }
+  "author": "SNine <J_longyan@163.com>",
+  "license": "MIT"
 }

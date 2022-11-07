@@ -3,7 +3,6 @@
 @use './common/var.scss' as *;
 @use './mixins/button' as *;
 
-
 @include b(button) {
   display: inline-block;
   line-height: 1;
@@ -18,7 +17,7 @@
   box-sizing: border-box;
   outline: none;
   margin: 0;
-  transition: .1s;
+  transition: 0.1s;
   font-weight: $button-font-weight;
   @include utils-user-select(none);
 
@@ -26,7 +25,12 @@
     margin-left: 10px;
   }
 
-  @include button-size($button-padding-vertical, $button-padding-horizontal, $button-font-size, $button-border-radius);
+  @include button-size(
+    $button-padding-vertical,
+    $button-padding-horizontal,
+    $button-font-size,
+    $button-border-radius
+  );
 
   &:hover,
   &:focus {
@@ -45,7 +49,7 @@
     border: 0;
   }
 
-  & [class*="br-icon-"] {
+  & [class*='br-icon-'] {
     & + span {
       margin-left: 5px;
     }
@@ -53,28 +57,48 @@
 
   /* size */
   @include m(medium) {
-    @include button-size($button-medium-padding-vertical, $button-medium-padding-horizontal, $button-medium-font-size, $button-medium-border-radius);
+    @include button-size(
+      $button-medium-padding-vertical,
+      $button-medium-padding-horizontal,
+      $button-medium-font-size,
+      $button-medium-border-radius
+    );
     @include when(circle) {
       padding: $button-medium-padding-vertical;
     }
   }
 
   @include m(small) {
-    @include button-size($button-small-padding-vertical, $button-small-padding-horizontal, $button-small-font-size, $button-small-border-radius);
+    @include button-size(
+      $button-small-padding-vertical,
+      $button-small-padding-horizontal,
+      $button-small-font-size,
+      $button-small-border-radius
+    );
     @include when(circle) {
       padding: $button-small-padding-vertical;
     }
   }
 
   @include m(mini) {
-    @include button-size($button-mini-padding-vertical, $button-mini-padding-horizontal, $button-mini-font-size, $button-mini-border-radius);
+    @include button-size(
+      $button-mini-padding-vertical,
+      $button-mini-padding-horizontal,
+      $button-mini-font-size,
+      $button-mini-border-radius
+    );
     @include when(circle) {
       padding: $button-mini-padding-vertical;
     }
   }
 
   @include m(tiny) {
-    @include button-size($button-tiny-padding-vertical, $button-tiny-padding-horizontal, $button-tiny-font-size, $button-tiny-border-radius);
+    @include button-size(
+      $button-tiny-padding-vertical,
+      $button-tiny-padding-horizontal,
+      $button-tiny-font-size,
+      $button-tiny-border-radius
+    );
     @include when(circle) {
       padding: $button-tiny-padding-vertical;
     }
@@ -82,22 +106,42 @@
 
   /* type */
   @include m(primary) {
-    @include button-variant($button-primary-font-color, $button-primary-background-color, $button-primary-border-color);
+    @include button-variant(
+      $button-primary-font-color,
+      $button-primary-background-color,
+      $button-primary-border-color
+    );
   }
   @include m(success) {
-    @include button-variant($button-success-font-color, $button-success-background-color, $button-success-border-color);
+    @include button-variant(
+      $button-success-font-color,
+      $button-success-background-color,
+      $button-success-border-color
+    );
   }
   @include m(warning) {
-    @include button-variant($button-warning-font-color, $button-warning-background-color, $button-warning-border-color);
+    @include button-variant(
+      $button-warning-font-color,
+      $button-warning-background-color,
+      $button-warning-border-color
+    );
   }
   @include m(danger) {
-    @include button-variant($button-danger-font-color, $button-danger-background-color, $button-danger-border-color);
+    @include button-variant(
+      $button-danger-font-color,
+      $button-danger-background-color,
+      $button-danger-border-color
+    );
   }
   @include m(info) {
-    @include button-variant($button-info-font-color, $button-info-background-color, $button-info-border-color);
+    @include button-variant(
+      $button-info-font-color,
+      $button-info-background-color,
+      $button-info-border-color
+    );
   }
 
-  /* text */ 
+  /* text */
   @include m(text) {
     border-color: transparent;
     color: $color-primary;
@@ -185,7 +229,7 @@
       right: -1px;
       bottom: -1px;
       border-radius: inherit;
-      background-color: rgba(255,255,255,.35);
+      background-color: rgba(255, 255, 255, 0.35);
     }
   }
   @include when(round) {

@@ -8,20 +8,13 @@
     "esModuleInterop": true,
     "target": "es6",
     "sourceMap": true,
-    "lib": [
-      "ESNext",
-      "DOM"
-    ],
+    "lib": ["ESNext", "DOM"],
     "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
     "strict": true,
-    "skipLibCheck": true,
+    "skipLibCheck": true
   },
-  "exclude": [
-    "node_modules",
-    "**/__tests__",
-    "dist/**"
-  ]
+  "exclude": ["node_modules", "**/__tests__", "dist/**"]
 }

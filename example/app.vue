@@ -1,32 +1,25 @@
 <template>
-  <BrainButtonGroup>
-    <BrainButton size='small' @click="hanlderClick"> button </BrainButton>
-    <BrainButton size='small' type='primary'> button </BrainButton>
-    <BrainButton size='small' type='success'> button </BrainButton>
-    <BrainButton size='small' type='danger'> button </BrainButton>
-    <BrainButton size='small' type='warning'> button </BrainButton>
-    <BrainButton size='small' type='info'> button </BrainButton>
-  </BrainButtonGroup>
+  <brain-button-group>
+    <brain-button size="small"> button </brain-button>
+    <brain-button size="small" type="primary"> button </brain-button>
+    <brain-button size="small" type="success"> button </brain-button>
+    <brain-button size="small" type="danger"> button </brain-button>
+    <brain-button size="small" type="warning"> button </brain-button>
+    <brain-button size="small" type="info"> button </brain-button>
+  </brain-button-group>
 
-  <br/>
-  <BrainButton >按钮尺寸</BrainButton>
-  <BrainButton size="medium">按钮尺寸</BrainButton>
-  <BrainButton size="small">按钮尺寸</BrainButton>
-  <BrainButton size="mini">按钮尺寸</BrainButton>
-  <BrainButton size="tiny">按钮尺寸</BrainButton>
-  <br/>
+  <br />
+  <brain-button>按钮尺寸</brain-button>
+  <brain-button size="medium">按钮尺寸</brain-button>
+  <brain-button size="small">按钮尺寸</brain-button>
+  <brain-button size="mini">按钮尺寸</brain-button>
+  <brain-button size="tiny">按钮尺寸</brain-button>
+  <br />
 
-  <BrainButton plain type="primary">朴素按钮</BrainButton>
-  <BrainButton round type="primary">椭圆</BrainButton>
-  <BrainButton disabled type="primary">禁止</BrainButton>
-  <BrainButton circle type="primary">圆</BrainButton>
-  
+  <brain-button plain type="primary" autofocus>朴素按钮</brain-button>
+  <brain-button round type="primary">椭圆</brain-button>
+  <brain-button disabled type="primary">禁止</brain-button>
+  <brain-button circle type="primary">圆</brain-button>
 </template>
 
-
-<script lang="ts" setup>
-import { ref } from 'vue';
-  function hanlderClick(evt) {
-    console.log('[ 123 ] >', 123)
-  }
-</script> 
+<script setup lang="ts"></script>

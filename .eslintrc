@@ -1,0 +1,4 @@
+{
+  "root": true,
+  "extends": ["@brain-ui/eslint-config"]
+}

@@ -1,7 +1,7 @@
-import button from './src/button.vue'
+import button from './src/button.vue';
 
-import {withInstall} from '@brain-ui/utils'
+import { withInstall } from '@brain-ui/utils';
 
-export const BrainButton =  withInstall(button)
+export const BrainButton = withInstall(button);
 
 export default BrainButton;
