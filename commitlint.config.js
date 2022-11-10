@@ -1,4 +1,4 @@
-/* https://www.jianshu.com/p/0f577906b5d1 https://commitlint.js.org/#/reference-rules */
+/* https://commitlint.js.org/#/reference-rules */
 module.exports = {
   ignores: [commit => commit.includes('init')],
   extends: ['@commitlint/config-conventional'],
