@@ -7,15 +7,15 @@
 
   &:hover,
   &:focus {
+    color: $color-white;
     background: $color;
     border-color: $color;
-    color: $color-white;
   }
 
   &:active {
+    color: $color-white;
     background: mix($color-black, $color, $button-active-shade-percent);
     border-color: mix($color-black, $color, $button-active-shade-percent);
-    color: $color-white;
     outline: none;
   }
 
@@ -38,22 +38,22 @@
 
   &:hover,
   &:focus {
+    color: $color;
     background: mix($color-white, $background-color, $button-hover-tint-percent);
     border-color: mix($color-white, $border-color, $button-hover-tint-percent);
-    color: $color;
   }
 
   &:active {
+    color: $color;
     background: mix($color-black, $background-color, $button-active-shade-percent);
     border-color: mix($color-black, $border-color, $button-active-shade-percent);
-    color: $color;
     outline: none;
   }
 
   &.is-active {
+    color: $color;
     background: mix($color-black, $background-color, $button-active-shade-percent);
     border-color: mix($color-black, $border-color, $button-active-shade-percent);
-    color: $color;
   }
 
   &.is-disabled {
@@ -76,6 +76,7 @@
   padding: $padding-vertical $padding-horizontal;
   font-size: $font-size;
   border-radius: $border-radius;
+
   &.is-round {
     padding: $padding-vertical $padding-horizontal;
   }

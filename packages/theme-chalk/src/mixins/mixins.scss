@@ -3,6 +3,7 @@
 
 /* BEM
  -------------------------- */
+
 /* 拼接命名空间 */
 @mixin b($block) {
   $B: $namespace + '-' + $block !global;

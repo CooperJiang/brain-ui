@@ -5,38 +5,33 @@
 
 @include b(button) {
   display: inline-block;
+  margin: 0;
+  font-weight: $button-font-weight;
   line-height: 1;
+  color: $button-default-font-color;
+  text-align: center;
   white-space: nowrap;
   cursor: pointer;
   background: $button-default-background-color;
   border: $border-base;
   border-color: $button-default-border-color;
-  color: $button-default-font-color;
-  -webkit-appearance: none;
-  text-align: center;
-  box-sizing: border-box;
   outline: none;
-  margin: 0;
+  box-sizing: border-box;
   transition: 0.1s;
-  font-weight: $button-font-weight;
+  appearance: none;
   @include utils-user-select(none);
 
   & + & {
     margin-left: 10px;
   }
 
-  @include button-size(
-    $button-padding-vertical,
-    $button-padding-horizontal,
-    $button-font-size,
-    $button-border-radius
-  );
+  @include button-size($button-padding-vertical, $button-padding-horizontal, $button-font-size, $button-border-radius);
 
   &:hover,
   &:focus {
     color: $color-primary;
-    border-color: $color-primary-light-7;
     background-color: $color-primary-light-9;
+    border-color: $color-primary-light-7;
   }
 
   &:active {
@@ -106,59 +101,40 @@
 
   /* type */
   @include m(primary) {
-    @include button-variant(
-      $button-primary-font-color,
-      $button-primary-background-color,
-      $button-primary-border-color
-    );
+    @include button-variant($button-primary-font-color, $button-primary-background-color, $button-primary-border-color);
   }
   @include m(success) {
-    @include button-variant(
-      $button-success-font-color,
-      $button-success-background-color,
-      $button-success-border-color
-    );
+    @include button-variant($button-success-font-color, $button-success-background-color, $button-success-border-color);
   }
   @include m(warning) {
-    @include button-variant(
-      $button-warning-font-color,
-      $button-warning-background-color,
-      $button-warning-border-color
-    );
+    @include button-variant($button-warning-font-color, $button-warning-background-color, $button-warning-border-color);
   }
   @include m(danger) {
-    @include button-variant(
-      $button-danger-font-color,
-      $button-danger-background-color,
-      $button-danger-border-color
-    );
+    @include button-variant($button-danger-font-color, $button-danger-background-color, $button-danger-border-color);
   }
   @include m(info) {
-    @include button-variant(
-      $button-info-font-color,
-      $button-info-background-color,
-      $button-info-border-color
-    );
+    @include button-variant($button-info-font-color, $button-info-background-color, $button-info-border-color);
   }
 
   /* text */
   @include m(text) {
-    border-color: transparent;
+    padding-right: 0;
+    padding-left: 0;
     color: $color-primary;
     background: transparent;
-    padding-left: 0;
-    padding-right: 0;
+    border-color: transparent;
 
     &:hover,
     &:focus {
       color: mix($color-white, $color-primary, $button-hover-tint-percent);
-      border-color: transparent;
       background-color: transparent;
+      border-color: transparent;
     }
+
     &:active {
       color: mix($color-black, $color-primary, $button-active-shade-percent);
-      border-color: transparent;
       background-color: transparent;
+      border-color: transparent;
     }
 
     &.is-disabled,
@@ -172,15 +148,15 @@
   @include when(plain) {
     &:hover,
     &:focus {
+      color: $color-primary;
       background: $color-white;
       border-color: $color-primary;
-      color: $color-primary;
     }
 
     &:active {
+      color: mix($color-black, $color-primary, $button-active-shade-percent);
       background: $color-white;
       border-color: mix($color-black, $color-primary, $button-active-shade-percent);
-      color: mix($color-black, $color-primary, $button-active-shade-percent);
       outline: none;
     }
   }
@@ -196,8 +172,8 @@
     &:focus {
       color: $button-disabled-font-color;
       cursor: not-allowed;
-      background-image: none;
       background-color: $button-disabled-background-color;
+      background-image: none;
       border-color: $button-disabled-border-color;
     }
 
@@ -209,9 +185,9 @@
       &,
       &:hover,
       &:focus {
+        color: $button-disabled-font-color;
         background-color: $color-white;
         border-color: $button-disabled-border-color;
-        color: $button-disabled-font-color;
       }
     }
   }
@@ -220,24 +196,24 @@
     position: relative;
     pointer-events: none;
 
-    &:before {
-      pointer-events: none;
-      content: '';
+    &::before {
       position: absolute;
-      left: -1px;
       top: -1px;
       right: -1px;
       bottom: -1px;
+      left: -1px;
+      pointer-events: none;
+      background-color: rgb(255 255 255 / 35%);
       border-radius: inherit;
-      background-color: rgba(255, 255, 255, 0.35);
+      content: '';
     }
   }
   @include when(round) {
-    border-radius: 20px;
     padding: 12px 23px;
+    border-radius: 20px;
   }
   @include when(circle) {
-    border-radius: 50%;
     padding: $button-padding-vertical;
+    border-radius: 50%;
   }
 }

@@ -5,18 +5,21 @@
 $all-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1) !default;
 $fade-transition: opacity 300ms cubic-bezier(0.23, 1, 0.32, 1) !default;
 $fade-linear-transition: opacity 200ms linear !default;
-$md-fade-transition: transform 300ms cubic-bezier(0.23, 1, 0.32, 1),
-  opacity 300ms cubic-bezier(0.23, 1, 0.32, 1) !default;
+$md-fade-transition: transform 300ms cubic-bezier(0.23, 1, 0.32, 1), opacity 300ms cubic-bezier(0.23, 1, 0.32, 1) !default;
 $border-transition-base: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1) !default;
 $color-transition-base: color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1) !default;
 
 /* Color #177DDC
 -------------------------- */
+
 /* light */
-// $color-primary: #1890FF !default;
-// $color-success: #52C41A !default;
-// $color-warning: #FAAD14 !default;
-// $color-danger: #F5222D !default;
+
+/*
+$color-primary: #1890FF !default;
+$color-success: #52C41A !default;
+$color-warning: #FAAD14 !default;
+$color-danger: #F5222D !default;
+*/
 
 $color-primary: #13c2c2 !default;
 $color-success: #a0d911 !default;
@@ -25,15 +28,17 @@ $color-danger: #fa541c !default;
 $color-info: #8c8c8c !default;
 
 /* dark */
-// $color-primary: #177DDC !default;
-// $color-success: #49AA19 !default;
-// $color-warning: #D89614 !default;
-// $color-danger: #D32029 !default;
-// $color-info: #7D7D7D !default;
 
-$color-white: #ffffff !default;
-/// color|1|Background Color|4
-$color-black: #000000 !default;
+/*
+$color-primary: #177DDC !default;
+$color-success: #49AA19 !default;
+$color-warning: #D89614 !default;
+$color-danger: #D32029 !default;
+$color-info: #7D7D7D !default;
+*/
+
+$color-white: #fff !default;
+$color-black: #000 !default;
 $color-primary-light-1: mix($color-white, $color-primary, 10%) !default; /* 53a8ff */
 $color-primary-light-2: mix($color-white, $color-primary, 20%) !default; /* 66b1ff */
 $color-primary-light-3: mix($color-white, $color-primary, 30%) !default; /* 79bbff */
@@ -80,10 +85,10 @@ $border-radius-small: 2px !default;
 $border-radius-circle: 100% !default;
 $border-radius-zero: 0 !default;
 
-// Box-shadow
-$box-shadow-base: 0 2px 4px rgba(0, 0, 0, 0.12), 0 0 6px rgba(0, 0, 0, 0.04) !default;
-$box-shadow-dark: 0 2px 4px rgba(0, 0, 0, 0.12), 0 0 6px rgba(0, 0, 0, 0.12) !default;
-$box-shadow-light: 0 2px 12px 0 rgba(0, 0, 0, 0.1) !default;
+/* Box-shadow */
+$box-shadow-base: 0 2px 4px rgb(0 0 0 / 12%), 0 0 6px rgb(0 0 0 / 4%) !default;
+$box-shadow-dark: 0 2px 4px rgb(0 0 0 / 12%), 0 0 6px rgb(0 0 0 / 12%) !default;
+$box-shadow-light: 0 2px 12px 0 rgb(0 0 0 / 10%) !default;
 
 /* Fill
 -------------------------- */
@@ -104,6 +109,7 @@ $font-weight-secondary: 100 !default;
 $font-line-height-primary: 24px !default;
 $font-line-height-secondary: 16px !default;
 $font-color-disabled-base: #bbb !default;
+
 /* Size
 -------------------------- */
 $size-base: 14px !default;
@@ -480,20 +486,24 @@ $switch-on-color: $color-primary !default;
 $switch-off-color: $border-color-base !default;
 $switch-font-size: $font-size-base !default;
 $switch-core-border-radius: 10px !default;
-// height||Other|4 TODO: width 代码写死的40px 所以下面这三个属性都没意义
+
+/* height||Other|4 TODO: width 代码写死的40px 所以下面这三个属性都没意义 */
 $switch-width: 40px !default;
-// height||Other|4
+
+/* height||Other|4 */
 $switch-height: 20px !default;
-// height||Other|4
+
+/* height||Other|4 */
 $switch-button-size: 16px !default;
 
 /* Dialog
 -------------------------- */
 $dialog-background-color: $color-white !default;
-$dialog-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3) !default;
+$dialog-box-shadow: 0 1px 3px rgb(0 0 0 / 30%) !default;
 $dialog-title-font-size: $font-size-large !default;
 $dialog-content-font-size: 14px !default;
-/// fontLineHeight||LineHeight|2
+
+/* / fontLineHeight||LineHeight|2 */
 $dialog-font-line-height: $font-line-height-primary !default;
 $dialog-padding-primary: 20px !default;
 
@@ -506,7 +516,7 @@ $table-header-font-color: $color-text-secondary !default;
 $table-row-hover-background-color: $background-color-base !default;
 $table-current-row-background-color: $color-primary-light-9 !default;
 $table-header-background-color: $color-white !default;
-$table-fixed-box-shadow: 0 0 10px rgba(0, 0, 0, 0.12) !default;
+$table-fixed-box-shadow: 0 0 10px rgb(0 0 0 / 12%) !default;
 
 /* Pagination
 -------------------------- */
@@ -578,13 +588,13 @@ $badge-padding: 6px !default;
 $badge-size: 18px !default;
 
 /* Card
---------------------------*/
+-------------------------- */
 $card-border-color: $border-color-lighter !default;
 $card-border-radius: 4px !default;
 $card-padding: 20px !default;
 
 /* Slider
---------------------------*/
+-------------------------- */
 $slider-main-background-color: $color-primary !default;
 $slider-runway-background-color: $border-color-light !default;
 $slider-button-hover-color: mix($color-primary, black, 97%) !default;
@@ -592,37 +602,40 @@ $slider-stop-background-color: $color-white !default;
 $slider-disable-color: $color-text-placeholder !default;
 $slider-margin: 16px 0 !default;
 $slider-border-radius: 3px !default;
-/// height|1|Other|4
+
+/* / height|1|Other|4 */
 $slider-height: 6px !default;
 $slider-button-size: 16px !default;
 $slider-button-wrapper-size: 36px !default;
 $slider-button-wrapper-offset: -15px !default;
 
 /* Steps
---------------------------*/
+-------------------------- */
 $steps-border-color: $disabled-border-base !default;
 $steps-border-radius: 4px !default;
 $steps-padding: 20px !default;
 
 /* Menu
---------------------------*/
+-------------------------- */
 $menu-item-font-size: $font-size-base !default;
 $menu-item-font-color: $color-text-primary !default;
 $menu-background-color: $color-white !default;
 $menu-item-hover-fill: $color-primary-light-9 !default;
 
 /* Rate
---------------------------*/
+-------------------------- */
 $rate-height: 20px !default;
 $rate-font-size: $font-size-base !default;
-/// height||Other|3
+
+/* / height||Other|3 */
 $rate-icon-size: 18px !default;
-/// margin||Spacing|2
+
+/* / margin||Spacing|2 */
 $rate-icon-margin: 6px !default;
 $rate-icon-color: $color-text-placeholder !default;
 
 /* DatePicker
---------------------------*/
+-------------------------- */
 $datepicker-font-color: $color-text-regular !default;
 $datepicker-off-font-color: $color-text-placeholder !default;
 $datepicker-header-font-color: $color-text-regular !default;
@@ -636,22 +649,23 @@ $datepicker-hover-font-color: $color-primary !default;
 $datepicker-cell-hover-color: #fff !default;
 
 /* Loading
---------------------------*/
+-------------------------- */
 $loading-spinner-size: 42px !default;
 $loading-fullscreen-spinner-size: 50px !default;
 
 /* Scrollbar
---------------------------*/
+-------------------------- */
 $scrollbar-background-color: rgba($color-text-secondary, 0.3) !default;
 $scrollbar-hover-background-color: rgba($color-text-secondary, 0.5) !default;
 
 /* Carousel
---------------------------*/
+-------------------------- */
 $carousel-arrow-font-size: 12px !default;
 $carousel-arrow-size: 36px !default;
-$carousel-arrow-background: rgba(31, 45, 61, 0.11) !default;
-$carousel-arrow-hover-background: rgba(31, 45, 61, 0.23) !default;
-/// width||Other|4
+$carousel-arrow-background: rgb(31 45 61 / 11%) !default;
+$carousel-arrow-hover-background: rgb(31 45 61 / 23%) !default;
+
+/* / width||Other|4 */
 $carousel-indicator-width: 30px !default;
 $carousel-indicator-height: 2px !default;
 $carousel-indicator-padding-horizontal: 4px !default;
@@ -659,7 +673,7 @@ $carousel-indicator-padding-vertical: 12px !default;
 $carousel-indicator-out-color: $border-color-hover !default;
 
 /* Collapse
---------------------------*/
+-------------------------- */
 $collapse-border-color: $border-color-lighter !default;
 $collapse-header-height: 48px !default;
 $collapse-header-background-color: $color-white !default;
@@ -670,7 +684,7 @@ $collapse-content-font-size: 13px !default;
 $collapse-content-font-color: $color-text-primary !default;
 
 /* Transfer
---------------------------*/
+-------------------------- */
 $transfer-border-color: $border-color-lighter !default;
 $transfer-border-radius: $border-radius-base !default;
 $transfer-panel-width: 200px !default;
@@ -682,31 +696,31 @@ $transfer-item-height: 30px !default;
 $transfer-filter-height: 32px !default;
 
 /* Header
-  --------------------------*/
+  -------------------------- */
 $header-padding: 0 20px !default;
 
 /* Footer
---------------------------*/
+-------------------------- */
 $footer-padding: 0 20px !default;
 
 /* Main
---------------------------*/
+-------------------------- */
 $main-padding: 20px !default;
 
 /* Timeline
---------------------------*/
+-------------------------- */
 $timeline-node-size-normal: 12px !default;
 $timeline-node-size-large: 14px !default;
 $timeline-node-color: $border-color-light !default;
 
 /* Backtop
---------------------------*/
+-------------------------- */
 $backtop-background-color: $color-white !default;
 $backtop-font-color: $color-primary !default;
 $backtop-hover-background-color: $border-color-extra-light !default;
 
 /* Link
---------------------------*/
+-------------------------- */
 $link-font-size: $font-size-base !default;
 $link-font-weight: $font-weight-primary !default;
 $link-default-font-color: $color-text-regular !default;
@@ -717,11 +731,14 @@ $link-success-font-color: $color-success !default;
 $link-warning-font-color: $color-warning !default;
 $link-danger-font-color: $color-danger !default;
 $link-info-font-color: $color-info !default;
+
 /* Calendar
---------------------------*/
-/// border||Other|4
+-------------------------- */
+
+/* / border||Other|4 */
 $calendar-border: $table-border !default;
-/// color||Other|4
+
+/* / color||Other|4 */
 $calendar-selected-background-color: #f2f8fe !default;
 $calendar-cell-width: 85px !default;
 
@@ -730,7 +747,7 @@ $calendar-cell-width: 85px !default;
 $form-label-font-size: $font-size-base !default;
 
 /* Avatar
---------------------------*/
+-------------------------- */
 $avatar-font-color: #fff !default;
 $avatar-background-color: #c0c4cc !default;
 $avatar-text-font-size: 14px !default;
@@ -755,7 +772,7 @@ $descriptions-table-border: 1px solid $border-color-lighter !default;
 $descriptions-item-bordered-label-background: #fafafa !default;
 
 /* Skeleton 
---------------------------*/
+-------------------------- */
 $skeleton-color: #f2f2f2 !default;
 $skeleton-to-color: #e6e6e6 !default;
 
@@ -777,7 +794,7 @@ $result-warning-color: $color-warning !default;
 $result-danger-color: $color-danger !default;
 
 /* Break-point
---------------------------*/
+-------------------------- */
 $sm: 768px !default;
 $md: 992px !default;
 $lg: 1200px !default;

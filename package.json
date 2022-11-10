@@ -5,22 +5,51 @@
   "main": "index.js",
   "scripts": {
     "dev": "pnpm -C example dev",
-    "lint:eslint": "eslint .",
+    "clear": "rimraf dist",
+    "clear:cache": "rimraf node_modules/.cache/ rimraf node_modules/.vite",
+    "clear:lib": "rimraf node_modules",
     "lint:fix": "eslint . --fix",
-    "lint:prettier": "prettier --write ."
+    "lint:eslint": "eslint .",
+    "lint:prettier": "prettier --write .",
+    "lint:css": "stylelint 'packages/theme-chalk/src/**/*.scss' --fix --custom-syntax postcss-scss",
+    "lint:ls-lint": "ls-lint",
+    "lint:staged": "lint-staged",
+    "reinstall": "rimraf pnpm-lock.yarm && rimraf node_modules && pnpm install",
+    "prepare": "husky install",
+    "postinstall": "npx husky install",
+    "commit": "git-cz"
   },
   "keywords": [],
   "author": "SNine <J_longyan@163.com>",
   "license": "ISC",
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
   "devDependencies": {
+    "@commitlint/cli": "^17.2.0",
+    "@commitlint/config-conventional": "^17.2.0",
+    "@ls-lint/ls-lint": "^1.11.2",
     "@typescript-eslint/eslint-plugin": "^5.42.0",
     "@typescript-eslint/parser": "^5.42.0",
+    "commitizen": "^4.2.5",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.26.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-vue": "^9.7.0",
+    "husky": "^8.0.2",
+    "lint-staged": "^13.0.3",
+    "postcss-scss": "^4.0.5",
     "prettier": "^2.7.1",
+    "rimraf": "^3.0.2",
     "sass": "^1.55.0",
+    "stylelint": "^14.14.1",
+    "stylelint-config-prettier": "^9.0.4",
+    "stylelint-config-standard": "^29.0.0",
+    "stylelint-order": "^5.0.0",
+    "stylelint-scss": "^4.3.0",
     "typescript": "^4.8.4",
     "vue": "^3.2.36"
   },
